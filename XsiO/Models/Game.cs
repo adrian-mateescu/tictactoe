@@ -1,15 +1,15 @@
 ﻿
-using XsiO.Enums;
-
-namespace XsiO.Models
+using TicTacToe.Interfaces;
+using TicTacToe.Enums;
+namespace TicTacToe.Models
 {
 
-    public class Game
+    public class Game : IGame
     {
         private readonly Board _board = new();
         private Mark _turn = Mark.X;
         private GameStatus _status = GameStatus.ONGOING;
-        public Board Board => _board;
+        public IBoard Board => _board;
         public GameStatus Status => _status;
 
 
@@ -54,6 +54,7 @@ namespace XsiO.Models
                 || (row + col == 2 && LineCount(0, 2, 1, 1, 2, 0, mark) == 3);
         }
 
+        //// Counts how many of the three given board positions (r1,c1), (r2,c2), (r3,c3) match 'mark' (0 to 3).
         private int LineCount(int r1, int c1, int r2, int c2, int r3, int c3, Mark mark)
         {
             int count = 0;

@@ -1,5 +1,5 @@
 ﻿
-namespace XsiO.Enums
+namespace TicTacToe.Enums
 {
     public enum GameStatus
     {

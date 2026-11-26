@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XsiO.Enums
+﻿namespace TicTacToe.Enums
 {
     public enum Mark
     {
